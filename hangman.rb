@@ -1,11 +1,13 @@
 # define a method name hangman with 2 parameters
 def hangman(word, guess)
    # empty array
+ 
    output = []
    # use split to split word into individual characters
+ 
    letters = word.split('')
-   # .map transforms empty array from values returned from the block
-   letters.map do |letter|
+   # use each method to loop through array
+   letters.each do |letter|
      if guess.include?(letter)
        output.push(letter)
      else
@@ -19,3 +21,4 @@ def hangman(word, guess)
  # calling the method
  puts hangman('pineapple', ['p'])
  puts hangman('Jessica', ['s'])
+ 
